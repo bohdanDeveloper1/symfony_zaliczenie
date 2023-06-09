@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>
+        {{ issue.title }}
+    </h1>
+
+    <div>
+        <p>Description of the problem: {{ issue.description }}</p>
+        <p>Email: {{ issue.contactEmail }}</p>
+        <p>Telephone: {{ issue.contactPhone }}</p>
+        <p>Date added {{ issue.createdAt.format('Y-m-d H:i:s') }}</p>
+        <p>Current status{{ issue.status }}</p>
+        <p>History of claims:</p>
+        {%  for comment in issue.issueComments %}
+            {{ comment.content }}
+        {% endfor %}
+    </div>
+{% endblock %}
