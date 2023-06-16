@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Tracker Application{% endblock %}</title>
-    <link href="{{ asset('css/some.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/header.css') }}" rel="stylesheet"/>
+{#    add jQuery#}
+    <script src="{{ asset('js/jquery.min.js') }}"></script>
+    <script src="{{ asset('js/train.js') }}"></script>
+
 </head>
 <body>
 <div id="sidebar">
     {% block sidebar %}
-        <ul>
+        <ul id = 'header_list'>
             <li><a href="{{ path('home') }}">Home</a></li>
 
             {% if app.user %}

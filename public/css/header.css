@@ -1,0 +1,15 @@
+#header_list{
+    display: flex;
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    list-style: none;
+    justify-content: center;
+    gap: 60px;
+}
+#header_list li{
+}
+a {
+    color: #1b1e21;
+    font-size: 30px;
+}

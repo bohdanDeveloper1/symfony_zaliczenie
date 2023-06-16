@@ -25,7 +25,7 @@ class TrackerController extends AbstractController
 
     // route to see all issues
     #[Route('/issues', name: 'issues')]
-    public function issues(Issue $issue, IssueRepository $repository, IssuesManager $issueManager, #[CurrentUser] ?User $user,): Response
+    public function issues(IssueRepository $repository, IssuesManager $issueManager, #[CurrentUser] ?User $user,): Response
     {
         if ($this->isGranted('ROLE_ADMIN')) {
             $myIssues = $repository->findAll();
